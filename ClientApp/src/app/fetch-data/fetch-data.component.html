@@ -1,0 +1,20 @@
+<h1>Sku Data</h1>
+
+<table class='table' *ngIf="skuData">
+  <thead>
+  <tr>
+    <th>Sku Name</th>
+    <th>Sku Price</th>
+    <th>SkuOffer Price</th>
+    <th>Sku Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let forecast of skuData">
+    <td>{{ forecast.skuName }}</td>
+    <td>{{ forecast.skuPrice }}</td>
+    <td>{{ forecast.skuOfferPrice }}</td>
+    <td>{{ forecast.skuDesc }}</td>
+  </tr>
+  </tbody>
+</table>
