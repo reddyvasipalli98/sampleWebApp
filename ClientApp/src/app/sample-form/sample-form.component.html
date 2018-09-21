@@ -10,12 +10,23 @@
       <label>Street : <input type="text" formControlName="street" /></label>
       <label>City   : <input type="text" formControlName="city" /></label>
       <label>
-             State  :
+        State  :
         <select formControlName="state">
           <option *ngFor="let stateName of stateList" [value]="stateName">{{stateName}}</option>
         </select>
       </label>
       <label>Zip    : <input type="text" formControlName="zip" /></label>
+    </div>
+
+    //Logic can be used in Admin Screens to enter more rows of data and save at the end once and for all - try implementing it in a screen like that.
+    <div formArrayName ="creditCards">
+      <h3>Credit Cards</h3>
+      <button (click) ="addCreditCards()">Add Credit Card</button>
+      <div *ngFor="let card of creditCards.controls; let i = index">
+        <label>
+          Card : <input type="text" [formControlName] ="i" />
+        </label>
+      </div>
     </div>
     <button type="submit">Submit</button>
   </form>
