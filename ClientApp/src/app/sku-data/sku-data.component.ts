@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sku-data',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sku-data.component.css']
 })
 export class SkuDataComponent implements OnInit {
+
+  @Input() skuItemName: string;
 
   constructor() { }
 

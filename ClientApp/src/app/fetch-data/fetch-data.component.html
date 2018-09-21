@@ -11,7 +11,7 @@
   </thead>
   <tbody>
   <tr *ngFor="let forecast of skuData">
-    <td [routerLinkActive]='["link-active"]'><a [routerLink]='["/sku-data"]' (click)='collapse()'> {{ forecast.skuName }}</a></td>
+    <td [routerLinkActive]='["link-active"]'><a [routerLink]='["/sku-data"]' (click)='collapse()' > {{ forecast.skuName }}</a></td>
     <td>{{ forecast.skuPrice }}</td>
     <td>{{ forecast.skuOfferPrice }}</td>
     <td>{{ forecast.skuDesc }}</td>
